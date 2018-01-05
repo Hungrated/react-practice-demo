@@ -25,7 +25,7 @@ class Index extends React.Component {
   render () {
     return (
       <div>
-        这是首页
+        This is the Index page
         Seconds: {this.state.seconds}
       </div>
     );

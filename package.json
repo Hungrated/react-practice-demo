@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
     "test": "echo \"no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hungrated",
   "license": "ISC",
   "dependencies": {
+    "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
