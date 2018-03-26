@@ -1,5 +1,5 @@
 const webpack = require ('webpack');//引入webpack
-// const opn = require ('opn');//打开浏览器
+const opn = require ('opn');//打开浏览器
 const merge = require ('webpack-merge');//webpack配置文件合并
 const path = require ('path');
 const baseWebpackConfig = require ('./webpack.base.conf');//基础配置
@@ -55,9 +55,9 @@ let config = merge (baseWebpackConfig, {
       }
     ],
     /*打开浏览器 并打开本项目网址*/
-    // after () {
-    //   opn ('http://localhost:' + this.port);
-    // }
+    after () {
+      opn ('http://localhost:' + this.port);
+    }
   }
 });
 
