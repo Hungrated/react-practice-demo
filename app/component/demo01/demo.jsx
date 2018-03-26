@@ -12,7 +12,9 @@ class Demo1 extends React.Component {
     return (
       <div>
         &emsp;{this.state.count}&emsp;
-        <button onClick={() => this.setState({count: this.state.count + 1})}>iterate</button>
+        <button onClick={() => this.setState((prev) => {
+          return prev.count += 1
+        })}>iterate</button>
       </div>
     );
   }
