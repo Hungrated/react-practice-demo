@@ -1,5 +1,6 @@
 import React from 'react';
 import Demo1 from './demo01/demo'
+import Demo2 from './demo02/demo'
 
 class Index extends React.Component {
   constructor (props) {
@@ -30,6 +31,8 @@ class Index extends React.Component {
         Seconds: {this.state.seconds}
         <br /><br />
         <Demo1 />
+        <br /><br />
+        <Demo2 />
       </div>
     );
   }
