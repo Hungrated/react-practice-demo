@@ -7,7 +7,8 @@ class Demo3 extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      time0: null
+      time0: null,
+      time1: new Date().toLocaleDateString()
     };
   }
 
@@ -25,6 +26,7 @@ class Demo3 extends React.Component {
   render () {
     return (
       <div>
+        {this.state.time1}&emsp;
         {this.state.time0}
       </div>
     );
