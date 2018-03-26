@@ -8,14 +8,16 @@ class Demo3 extends React.Component {
     super(props);
     this.state = {
       time0: null,
-      time1: new Date().toLocaleDateString()
+      time1: new Date().toLocaleDateString().replace(/\//g, '-')
     };
   }
 
   componentDidMount () {
     this.setState({time0: this.props.now});
     r = setInterval(() => {
-      this.setState({time0: Date.now()});
+      this.setState((prev) => {
+        return prev.time0 += 50
+      });
     }, 50);
   }
 
