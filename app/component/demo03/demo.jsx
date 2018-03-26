@@ -12,14 +12,14 @@ class Demo3 extends React.Component {
   }
 
   componentDidMount () {
-    this.state.time0 = this.props.now;
+    this.setState({time0: this.props.now});
     r = setInterval(() => {
-      this.state.time0 = Date.now();
-    }, 2000);
+      this.setState({time0: Date.now()});
+    }, 50);
   }
 
   componentWillUnmount () {
-    r = clearInterval(r);
+    clearInterval(r);
   }
 
   render () {
