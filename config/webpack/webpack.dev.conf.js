@@ -7,7 +7,7 @@ const baseWebpackConfig = require ('./webpack.base.conf');//基础配置
 let config = merge (baseWebpackConfig, {
   output: {
     path: path.resolve (__dirname, '../../build'),
-    filename: 'js/[name].js',
+    filename: 'js/bundle.js',
     chunkFilename: "js/[name]-[id].js",
     publicPath: ''
   },
